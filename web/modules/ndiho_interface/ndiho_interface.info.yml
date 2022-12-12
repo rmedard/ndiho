@@ -1,0 +1,5 @@
+name: Ndiho Interface
+type: module
+description: Provides user interface settings and enhancements
+package: Custom
+core_version_requirement: ^9 || ^10

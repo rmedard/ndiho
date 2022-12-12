@@ -1,0 +1,8 @@
+ndiho_interface.example:
+  path: '/homepage'
+  defaults:
+    _title: 'Ndiho'
+    _controller: '\Drupal\ndiho_interface\Controller\NdihoInterfaceController::homepage'
+  requirements:
+    _permission: 'access content'
+

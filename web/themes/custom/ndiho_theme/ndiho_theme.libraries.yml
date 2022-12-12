@@ -1,0 +1,21 @@
+aos:
+  version: v2.3.4
+  css:
+    component:
+      /libraries/aos/dist/aos.css: { minified: true }
+  js:
+    /libraries/aos/dist/aos.js: { minified: true }
+
+global-styling:
+  version: VERSION
+  js:
+    js/bootstrap.min.js: { weight: -48 }
+    js/barrio.js: {}
+    js/custom.js: {}
+  css:
+    component:
+      css/style.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/popperjs
