@@ -7,6 +7,7 @@ core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_barrio
 
 libraries:
+  - ndiho_theme/aos
   - ndiho_theme/global-styling
 libraries-override:
   bootstrap_barrio/global-styling: false

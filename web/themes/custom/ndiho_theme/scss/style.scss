@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Bootstrap 4 Sass
 Description: Bootstrap 4 with Sass
 */
@@ -10,51 +10,218 @@ Description: Bootstrap 4 with Sass
 -------------------------------------------------*/
 
 body {
-    background: $white;
+  background: #f8f9fa;
 }
 
 
-/* COLORS 
+/* COLORS
 --------------------------------------------------*/
 
 a {
-    color: $accent-shade;
+  color: $accent-shade;
 }
 
 .bg-inverse {
-    background: $primary-shade !important;
+  background: $primary-shade !important;
 }
 
 .site-footer {
-    background: $accent-shade !important;
+  background: $accent-shade !important;
 }
 
 .menu--main li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .menu--account li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .site-name-slogan a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 .card-group .field--type-image {
-    margin: 0
+  margin: 0
 }
 
 .slick {
-    width: 100%;
+  width: 100%;
 }
 
-.slick>div {
-    margin: 0 15px;
+.slick > div {
+  margin: 0 15px;
+}
+
+header#header {
+  background-image: url("../images/backgrounds/homepage.webp");
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .main-jumbo {
+    min-height: 75vh;
+
+    h1 {
+      font-size: 95px;
+      line-height: 95px;
+    }
+  }
+}
+
+#donation-bar {
+  background-image: url("../images/backgrounds/donate.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+nav#navbar-main {
+  background: linear-gradient(to bottom, #222, rgba(34, 34, 34, 0));
+  transition: all 0.25s ease;
+
+  li.nav-item {
+    font-weight: 600;
+
+    a {
+      position: relative;
+
+      &.dropdown-toggle::after {
+        border: none;
+      }
+    }
+
+    a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+
+    a.nav-link.is-active:after {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.has-background {
+    background: $white;
+
+    li.nav-item > a.nav-link {
+      color: $accent-shade !important;
+
+      &:after {
+        background: $accent-shade;
+      }
+
+      &.is-active {
+        &:after {
+          background: $accent-shade;
+        }
+      }
+    }
+
+    .toggler-icon {
+      background: $accent-shade;
+    }
+  }
+}
+
+.number {
+  opacity: 0.1;
+  font-size: 130px;
+  display: block;
+  line-height: 120px;
+  position: absolute;
+  top: 10px;
+}
+
+
+.why .card {
+  -webkit-transition: all .4s ease 0s;
+  -moz-transition: all .4s ease 0s;
+  -o-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
+
+  &:hover {
+    background: $red-400;
+  }
+}
+
+.why .card:hover h3,
+.why .card:hover p {
+  color: $light;
+}
+
+.hover-style-1 {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+    background: linear-gradient(90deg, $primary-shade 0%, $primary-dark 100%);
+    border-color: $primary-shade;
+  }
+
+  h3, p, a, i, h4 {
+    position: relative;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+  }
+
+  &:hover {
+
+    &:before {
+      height: 100%;
+    }
+
+    a {
+      color: rgba(255, 255, 255, .8) !important;
+    }
+  }
+}
+
+.hover-style-1:hover h3,
+.hover-style-1:hover h4,
+.hover-style-1:hover p,
+.hover-style-1:hover a {
+  color: $light;
+}
+
+.hover-style-1:hover i {
+  color: rgba(255, 255, 255, .8) !important;
 }

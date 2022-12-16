@@ -6,3 +6,11 @@ ndiho_interface.example:
   requirements:
     _permission: 'access content'
 
+ndiho_interface.social_media.settings:
+  path: '/admin/manage/settings/social-media'
+  defaults:
+    _form: '\Drupal\ndiho_interface\Form\SocialMediaSettings'
+    _title: 'Social Media Settings'
+  requirements:
+    _permission: 'administer site configuration'
+

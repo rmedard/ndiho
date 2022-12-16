@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ndiho_interface_theme($existing, $type, $theme, $path): array {
+  return [
+    'homepage' => [
+      'variables' => [],
+    ],
+    'social_media_buttons' => [
+      'variables' => [
+        'facebook' => '',
+        'twitter' => '',
+        'instagram' => '',
+        'youtube' => '',
+      ],
+    ],
+  ];
+}

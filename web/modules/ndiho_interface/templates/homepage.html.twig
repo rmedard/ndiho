@@ -1,0 +1,44 @@
+<div class="bg-primary mb-5 py-4" id="donation-bar">
+  <div class="container">
+    <div class="row text-white">
+      <div class="col-md-6 ps-0">
+        <h2><i class="fa-solid fa-caret-right text-secondary me-2"></i>{{ 'Faites un don'|t }}</h2>
+        <p class="m-0 fs-5">L’autonomie financière de Jambo repose sur votre générosité.
+          Elle nous protège contre la dépendance financière qui peut aboutir à une dépendance intellectuelle.</p>
+      </div>
+      <div class="col-md-6 px-0 pt-3 pt-md-0 ps-md-3">
+        <div class="d-flex flex-column gap-2" id="donation-form">
+          <div class="row g-2">
+            <div class="col-3">
+              <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" value="25">
+              <label class="btn btn-outline-secondary d-block fw-bold" for="option1">25€</label>
+            </div>
+            <div class="col-3">
+              <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" value="50" checked>
+              <label class="btn btn-outline-secondary d-block fw-bold" for="option2">50€</label>
+            </div>
+            <div class="col-3">
+              <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" value="100">
+              <label class="btn btn-outline-secondary d-block fw-bold" for="option3">100€</label>
+            </div>
+            <div class="col-3">
+              <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" value="other">
+              <label class="btn btn-outline-secondary d-block fw-bold" for="option4">Autre</label>
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col-6">
+              <div class="input-group free-donation-field border-0" hidden>
+                <input class="form-control border-0 shadow-none" type="number" min="0" id="option5">
+                <label class="input-group-text fw-bold bg-white border-0" for="option5">€</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <button type="button" id="donate-submit-btn" class="btn btn-danger w-100 text-white fw-bold"><span class="me-3">Faire un don</span><i class="fa-solid fa-caret-right text-white"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

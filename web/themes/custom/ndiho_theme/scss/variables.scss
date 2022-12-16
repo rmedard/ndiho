@@ -43,8 +43,8 @@ $inverse-color: $white;
 // Style anchor elements.
 $link-color: $accent-shade;
 $link-decoration: none;
-$link-hover-color: $accent-dark;
-$link-hover-decoration: underline;
+$link-hover-color: $primary-dark;
+$link-hover-decoration: none;
 // Comments
 $comment-spacer-x: 1.25em;
 $comment-spacer-y: 1.25em;
@@ -52,11 +52,13 @@ $comment-spacer-y: 1.25em;
 $enable-responsive-font-sizes: true;
 $enable-shadows: false;
 $enable-gradients: false;
+$enable-negative-margins: true;
 // Breadcrumbs (Works only on Bootstrap 5+)
 // $breadcrumb-divider: quote(">");
 
 $navbar-dark-color: $white;
-$navbar-dark-hover-color: $primary-dark;
+$navbar-dark-hover-color: $white;
+$nav-link-color: $white;
 $nav-link-font-size: 20px;
 $navbar-nav-link-padding-x: 20px;
 
