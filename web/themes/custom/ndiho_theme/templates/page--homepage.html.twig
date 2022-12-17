@@ -73,12 +73,16 @@
       {% include '@ndiho_theme/includes/navigation-bar.html.twig' %}
       <section class="main-jumbo py-5 container-fluid text-white d-flex flex-column justify-content-center">
         <div class="container" data-aos="fade-up">
-          <h1 class="text-uppercase text-white mb-5">Ndiho <br>
-            <span class="text-danger">J'existe</span><br>
-            J'ai survécu</h1>
-          <p>
-            <a href="#" class="btn btn-danger btn-lg my-2 text-white"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
-          </p>
+          <div class="row mb-5">
+            <div class="col-12 col-md-8">
+              <h1 class="text-uppercase text-white">Ndiho <br>
+                <span class="text-danger">J'existe</span><br>
+                J'ai survécu</h1>
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center border-start border-3">
+              <a href="#" class="btn btn-danger btn-lg my-2 text-white"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
+            </div>
+          </div>
         </div>
       </section>
     </header>
@@ -90,7 +94,7 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">01</span>
-                  <h3 class="mt-3">Vision 1</h3>
+                  <h3 class="mt-3">Mission 1</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
@@ -98,7 +102,7 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">02</span>
-                  <h3 class="mt-3">Vision 2</h3>
+                  <h3 class="mt-3">Mission 2</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
@@ -106,7 +110,7 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">03</span>
-                  <h3 class="mt-3">Vision 3</h3>
+                  <h3 class="mt-3">Mission 3</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
@@ -114,7 +118,7 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">04</span>
-                  <h3 class="mt-3">Vision 4</h3>
+                  <h3 class="mt-3">Mission 4</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
@@ -122,7 +126,7 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">05</span>
-                  <h3 class="mt-3">Vision 5</h3>
+                  <h3 class="mt-3">Mission 5</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
@@ -130,35 +134,19 @@
               <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
                   <span class="number">06</span>
-                  <h3 class="mt-3">Vision 6</h3>
+                  <h3 class="mt-3">Mission 6</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row row-offcanvas row-offcanvas-left clearfix">
-              <main{{ content_attributes }}>
-                <section class="section">
-                  <a id="main-content" tabindex="-1"></a>
-                  {{ page.content }}
-                </section>
-              </main>
-            {% if page.sidebar_first %}
-              <div{{ sidebar_first_attributes }}>
-                <aside class="section" role="complementary">
-                  {{ page.sidebar_first }}
-                </aside>
-              </div>
-            {% endif %}
-            {% if page.sidebar_second %}
-              <div{{ sidebar_second_attributes }}>
-                <aside class="section" role="complementary">
-                  {{ page.sidebar_second }}
-                </aside>
-              </div>
-            {% endif %}
-          </div>
+          <main{{ content_attributes }}>
+            <section class="section">
+              <a id="main-content" tabindex="-1"></a>
+              {{ page.content }}
+            </section>
+          </main>
         </div>
       {% endblock %}
     </div>

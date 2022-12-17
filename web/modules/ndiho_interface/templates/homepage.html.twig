@@ -1,6 +1,6 @@
 <div class="bg-primary mb-5 py-4" id="donation-bar">
   <div class="container">
-    <div class="row text-white">
+    <div class="row text-white px-md-0 px-3">
       <div class="col-md-6 ps-0">
         <h2><i class="fa-solid fa-caret-right text-secondary me-2"></i>{{ 'Faites un don'|t }}</h2>
         <p class="m-0 fs-5">L’autonomie financière de Jambo repose sur votre générosité.
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="col-6">
-              <button type="button" id="donate-submit-btn" class="btn btn-danger w-100 text-white fw-bold"><span class="me-3">Faire un don</span><i class="fa-solid fa-caret-right text-white"></i></button>
+              <button type="button" id="donate-submit-btn" class="btn btn-danger w-100 text-white fw-bold"><span class="me-3">Faire un don</span><i class="fa-solid fa-heart text-white"></i></button>
             </div>
           </div>
         </div>
@@ -42,3 +42,40 @@
     </div>
   </div>
 </div>
+
+<div class="video-bg">
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    {#    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">#}
+    <source src="{{ 'public://front/videos/bonino.mp4'|file_url }}" type="video/mp4">
+  </video>
+  <!-- The header content -->
+  <div class="container h-100 video-overlay-text">
+    <div class="d-flex h-100 align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3 fw-bold text-danger">Ndiho</h1>
+        <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.
+          <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section cta my-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <div class="text-center">
+          <span class="h6 letter-spacing text-white">Discover your potential</span>
+          <h2 class="text-lg mt-4 mb-5 text-white">
+            Book your early seat to get <span class="text-color">summer 25% </span>dicsount
+          </h2>
+
+          <a href="#" class="btn btn-main text-white">Join Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

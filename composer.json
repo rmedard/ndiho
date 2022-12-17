@@ -48,6 +48,7 @@
         "drupal/core-recommended": "9.5.0",
         "drupal/fontawesome": "^2.24",
         "drupal/pathauto": "^1.11",
+        "drupal/symfony_mailer": "^1.1@beta",
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^3.18",
         "drush/drush": "^11.3",
