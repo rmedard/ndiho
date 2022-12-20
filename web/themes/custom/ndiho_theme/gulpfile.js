@@ -24,11 +24,11 @@ const paths = {
   scss: {
     src: './scss/style.scss',
     dest: './css',
-    watch: './scss/**/*.scss',
-    bootstrap: './node_modules/bootstrap/scss/bootstrap.scss',
+    watch: './scss/**/*.scss'
   },
   js: {
-    bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    mdb: './node_modules/mdb-ui-kit/js/mdb.min.js',
+    mdb_map: './node_modules/mdb-ui-kit/js/mdb.min.js.map',
     popper: './node_modules/@popperjs/core/dist/umd/popper.min.js',
     barrio: '../../contrib/bootstrap_barrio/js/barrio.js',
     dest: './js'
@@ -37,11 +37,10 @@ const paths = {
 
 // Compile sass into CSS & auto-inject into browsers
 function styles () {
-  return gulp.src([paths.scss.bootstrap, paths.scss.src])
+  return gulp.src([paths.scss.src])
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
-        './node_modules/bootstrap/scss',
         '../../contrib/bootstrap_barrio/scss'
       ]
     }).on('error', sass.logError))
@@ -68,7 +67,7 @@ function styles () {
 
 // Move the javascript files into our js folder
 function js () {
-  return gulp.src([paths.js.bootstrap, paths.js.popper, paths.js.barrio])
+  return gulp.src([paths.js.mdb, paths.js.mdb_map, paths.js.popper, paths.js.barrio])
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream())
 }
@@ -79,7 +78,7 @@ function serve () {
     proxy: 'http://ndiho.docker.localhost',
   })
 
-  gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
+  gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
 }
 
 const build = gulp.series(styles, gulp.parallel(js, serve))

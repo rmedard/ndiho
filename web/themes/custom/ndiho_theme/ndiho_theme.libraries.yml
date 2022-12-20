@@ -7,15 +7,15 @@ aos:
     /libraries/aos/dist/aos.js: { minified: true }
 
 global-styling:
-  version: VERSION
+  version: 0.1
   js:
-    js/bootstrap.min.js: { weight: -48 }
+    js/popper.min.js: { weight: -49 }
+    js/mdb.min.js: { weight: -48 }
     js/barrio.js: {}
     js/custom.js: {}
   css:
     component:
       css/style.css: {}
   dependencies:
-    - core/jquery
     - core/drupal
     - core/popperjs

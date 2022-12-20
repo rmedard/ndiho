@@ -6,10 +6,11 @@
 // typography
 @import "typography";
 //bootstrap
-@import "bootstrap";
+//@import "bootstrap";
 //material design bootstrap
-//@import "../node_modules/mdbootstrap/scss/mdb-free.scss";
+@import "../node_modules/mdb-ui-kit/css/mdb.min.css";
+
 // mixins
-@import "mixins";
+//@import "mixins";
 // barrio
-@import "barrio";
+//@import "../../../contrib/bootstrap_barrio/scss/barrio";

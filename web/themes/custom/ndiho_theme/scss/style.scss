@@ -167,23 +167,6 @@ nav#navbar-main {
   top: 10px;
 }
 
-
-.why .card {
-  -webkit-transition: all .4s ease 0s;
-  -moz-transition: all .4s ease 0s;
-  -o-transition: all .4s ease 0s;
-  transition: all .4s ease 0s;
-
-  &:hover {
-    background: $red-400;
-  }
-}
-
-.why .card:hover h3,
-.why .card:hover p {
-  color: $light;
-}
-
 .hover-style-1 {
   position: relative;
 
@@ -226,7 +209,7 @@ nav#navbar-main {
 .hover-style-1:hover h4,
 .hover-style-1:hover p,
 .hover-style-1:hover a {
-  color: $light;
+  color: $primary-light;
 }
 
 .hover-style-1:hover i {
