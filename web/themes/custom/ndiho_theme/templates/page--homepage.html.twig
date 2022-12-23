@@ -71,7 +71,7 @@
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
       {% include '@ndiho_theme/includes/navigation-bar.html.twig' %}
-      <section class="main-jumbo py-5 container-fluid text-white d-flex flex-column justify-content-center">
+      <div class="main-jumbo py-5 text-white d-flex flex-column justify-content-center">
         <div class="container" data-aos="fade-up">
           <div class="row mb-5">
             <div class="col-12 col-md-8">
@@ -80,11 +80,11 @@
                 J'ai survécu</h1>
             </div>
             <div class="col-12 col-md-4 d-flex align-items-center justify-content-center border-start border-3">
-              <a href="#" class="btn btn-danger btn-lg my-2 text-white"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="btn btn-danger btn-lg"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </header>
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}

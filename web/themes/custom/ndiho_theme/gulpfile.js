@@ -30,6 +30,7 @@ const paths = {
     mdb: './node_modules/mdb-ui-kit/js/mdb.min.js',
     mdb_map: './node_modules/mdb-ui-kit/js/mdb.min.js.map',
     popper: './node_modules/@popperjs/core/dist/umd/popper.min.js',
+    popper_map: './node_modules/@popperjs/core/dist/umd/popper.min.js.map',
     barrio: '../../contrib/bootstrap_barrio/js/barrio.js',
     dest: './js'
   }
@@ -67,7 +68,7 @@ function styles () {
 
 // Move the javascript files into our js folder
 function js () {
-  return gulp.src([paths.js.mdb, paths.js.mdb_map, paths.js.popper, paths.js.barrio])
+  return gulp.src([paths.js.mdb,paths.js.mdb_map, paths.js.popper, paths.js.popper_map, paths.js.barrio])
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream())
 }

@@ -58,6 +58,14 @@
           }
           radio.addEventListener('change', function (value) {
             let selectedValue = radio.value;
+            form.querySelectorAll('label').forEach((el) => {
+              el.classList.remove('btn-dark');
+              el.classList.add('btn-outline-dark');
+            });
+            const selectedInput = form.querySelector(`input[value="${selectedValue}"]`);
+            const selectedInputLabel = form.querySelector(`label[for="${selectedInput.id}"]`)
+            selectedInputLabel.classList.remove('btn-outline-dark');
+            selectedInputLabel.classList.add('btn-dark');
             if (selectedValue === 'other') {
               donation = 0;
               freeDonationField.removeAttribute('hidden');
@@ -88,7 +96,10 @@
        */
       const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
       dropdownElementList.forEach((menu) => {
+        const id = Math.random().toString(36).slice(2, 7);
+        menu.setAttribute('id', `drop-down-${id}`);
         let dropdownMenu = menu.parentElement.querySelector('ul.dropdown-menu');
+        dropdownMenu.setAttribute('aria-labelledby', `drop-down-${id}`);
         let dropdown = new mdb.Dropdown(menu);
         let itemHovered = false;
         let menuHovered = false;
@@ -105,7 +116,7 @@
             }
           }, cursorTimeout);
         });
-        dropdownMenu.querySelectorAll('li.dropdown-item').forEach(item => {
+        dropdownMenu.querySelectorAll('li').forEach(item => {
           item.addEventListener('mouseover', function () {
             itemHovered = true;
           });

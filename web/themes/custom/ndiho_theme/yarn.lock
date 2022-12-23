@@ -2491,7 +2491,7 @@ matchdep@^2.0.0:
 
 mdb-ui-kit@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.npmjs.org/mdb-ui-kit/-/mdb-ui-kit-6.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/mdb-ui-kit/-/mdb-ui-kit-6.0.1.tgz#5ee81d4a4e626446379a158483129b4860408a17"
   integrity sha512-jZlO47ytSLcAzBmjSThtI+0QGDjJd4+EGZrHL6ZNI5tVd7OVyXvzEyoi5f9XU/rLMBUT2fwrkFQVubBg/Aw3Bw==
 
 memoizee@0.4.X:

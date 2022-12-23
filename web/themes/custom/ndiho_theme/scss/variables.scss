@@ -1,12 +1,16 @@
 /* VARIABLES */
 
 // colors
-$primary-shade: rgb(76, 149, 119);
+$primary: rgb(76, 149, 119);
+$primary-shade: $primary;
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
-$accent-shade: #303036;
+$accent-shade: #1c1c1c;
 $accent-light: lighten($accent-shade, 37%);
 $accent-dark: darken($accent-shade, 12%);
+
+$secondary: $accent-shade;
+$secondary-shade: $secondary;
 // Reassign color vars to semantic color scheme
 $red: #fc5130;
 $yellow: #ffc107;
@@ -26,10 +30,13 @@ $theme-colors: (
   dark: $gray-800
 );
 $brand-primary: $primary-shade;
-//$brand-success: $green;
-//$brand-info: $teal;
-//$brand-warning: $orange;
-//$brand-danger: $red;
+$brand-secondary: $accent-shade;
+$brand-success: $green;
+$brand-info: $cyan;
+$brand-warning: $yellow;
+$brand-danger: $red;
+$brand-light: $gray-100;
+$brand-dark: $accent-shade;
 $brand-inverse: $primary-shade;
 // Body
 //
@@ -41,7 +48,7 @@ $inverse-color: $white;
 // Links
 //
 // Style anchor elements.
-$link-color: $accent-shade;
+$link-color: $primary-shade;
 $link-decoration: none;
 $link-hover-color: $primary-dark;
 $link-hover-decoration: none;
@@ -57,16 +64,15 @@ $enable-negative-margins: true;
 // $breadcrumb-divider: quote(">");
 
 $navbar-dark-color: $white;
-$navbar-dark-hover-color: $white;
-$nav-link-color: $white;
-$nav-link-font-size: 20px;
+$navbar-dark-hover-color: $primary-shade;
+$navbar-dark-active-color: $primary-shade;
+$nav-link-font-size: 18px;
 $navbar-nav-link-padding-x: 20px;
 
 //$navbar-light-toggler-border-color: $accent-shade;
 //$navbar-dark-toggler-border-color: $accent-shade;
 //$navbar-dark-toggler-icon-bg: $accent-shade;
 //$navbar-light-toggler-icon-bg: $accent-shade;
-
 
 $pagination-active-bg: $primary-shade;
 $pagination-focus-bg: $primary-light;

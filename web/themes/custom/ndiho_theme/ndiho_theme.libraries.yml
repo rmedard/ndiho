@@ -1,3 +1,8 @@
+bootstrap-barrio:
+  version: VERSION
+  js:
+    js/barrio.js: {}
+
 aos:
   version: v2.3.4
   css:
@@ -6,16 +11,20 @@ aos:
   js:
     /libraries/aos/dist/aos.js: { minified: true }
 
+mdb:
+  version: 6.1.0
+  js:
+    js/popper.min.js: { weight: -49, minified: true }
+    js/mdb.min.js: { weight: -48, minified: true }
+
 global-styling:
   version: 0.1
   js:
-    js/popper.min.js: { weight: -49 }
-    js/mdb.min.js: { weight: -48 }
-    js/barrio.js: {}
     js/custom.js: {}
   css:
     component:
-      css/style.css: {}
+      css/style.css: { weight: 0 }
   dependencies:
     - core/drupal
     - core/popperjs
+    - core/jquery
