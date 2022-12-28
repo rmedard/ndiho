@@ -37,20 +37,36 @@
                     "url": "https://github.com/michalsnik/aos/archive/refs/tags/v2.3.4.zip"
                 }
             }
+        },
+        "colorbox": {
+            "type": "package",
+            "package": {
+                "name": "colorbox/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/jackmoore/colorbox/archive/refs/tags/1.6.4.zip"
+                }
+            }
         }
     },
     "require": {
         "aos/aos": "^2.3",
+        "colorbox/colorbox": "^1.6",
         "composer/installers": "^1.9",
         "drupal/bootstrap_sass": "^5.0",
+        "drupal/colorbox": "^2.0",
         "drupal/core-composer-scaffold": "9.5.0",
         "drupal/core-project-message": "9.5.0",
         "drupal/core-recommended": "9.5.0",
+        "drupal/devel": "^5.1",
         "drupal/fontawesome": "^2.24",
         "drupal/pathauto": "^1.11",
         "drupal/symfony_mailer": "^1.1@beta",
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^3.18",
+        "drupal/views_bootstrap": "^5.5@alpha",
         "drush/drush": "^11.3",
         "fontawesome/fontawesome": "^6.2"
     },

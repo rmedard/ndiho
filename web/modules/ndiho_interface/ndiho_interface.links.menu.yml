@@ -1,0 +1,18 @@
+ndiho_interface.ndiho_settings:
+  menu_name: 'ndiho_settings'
+  title: 'Ndiho Settings'
+  route_name: ndiho_interface.ndiho_settings
+  parent: system.admin_config
+  weight: 0
+ndiho_interface.social_media_settings:
+  title: 'Social Media Settings'
+  description: 'Configure social media settings. Facebook, Instagram, Youtube, etc...'
+  route_name: ndiho_interface.social_media.settings
+  parent: ndiho_interface.ndiho_setting
+  weight: 0
+ndiho_interface.donation_settings:
+  title: 'Donation Settings'
+  description: 'Configure donation settings. Paypal, Bank Account, etc...'
+  route_name: ndiho_interface.donation.settings
+  parent: ndiho_interface.ndiho_setting
+  weight: 1

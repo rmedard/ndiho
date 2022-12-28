@@ -120,6 +120,19 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 nav#navbar-main {
   background: linear-gradient(to bottom, #222, rgba(34, 34, 34, 0));
   transition: all 0.25s ease;

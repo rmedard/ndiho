@@ -7,34 +7,37 @@
           Elle nous protège contre la dépendance financière qui peut aboutir à une dépendance intellectuelle.</p>
       </div>
       <div class="col-md-6 px-0 pt-3 pt-md-0 ps-md-3">
-        <div class="d-flex flex-column gap-2" id="donation-form">
+        <div class="d-flex flex-column gap-2" id="donation-form" data-once="donation-form">
           <div class="row g-2">
             <div class="col-3 d-grid">
-              <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" value="25">
+              <input type="radio" class="btn-check" name="donation-options" id="option1" autocomplete="off" value="25">
               <label class="btn btn-outline-dark fw-bold" for="option1">25€</label>
             </div>
             <div class="col-3">
-              <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" value="50" checked>
-              <label class="btn btn-outline-dark d-block fw-bold" for="option2">50€</label>
+              <input type="radio" class="btn-check" name="donation-options" id="option2" autocomplete="off" value="50">
+              <label class="btn btn-dark d-block fw-bold" for="option2">50€</label>
             </div>
             <div class="col-3">
-              <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" value="100">
+              <input type="radio" class="btn-check" name="donation-options" id="option3" autocomplete="off" value="100">
               <label class="btn btn-outline-dark d-block fw-bold" for="option3">100€</label>
             </div>
             <div class="col-3">
-              <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" value="other">
+              <input type="radio" class="btn-check" name="donation-options" id="option4" autocomplete="off" value="other">
               <label class="btn btn-outline-dark d-block fw-bold" for="option4">Autre</label>
             </div>
           </div>
           <div class="row g-2">
             <div class="col-6">
-              <div class="input-group free-donation-field border-0" hidden>
-                <input class="form-control border-0 shadow-none" type="number" min="0" id="option5">
-                <label class="input-group-text fw-bold bg-white border-0" for="option5">€</label>
+              <div class="input-group free-donation-field border-0" hidden data-once="free-donation-field">
+                <input class="form-control border-0 shadow-none" type="number" min="0" id="donation-amount" value="50" data-once="donation-amount">
+                <label class="input-group-text fw-bold bg-white border-0" for="donation-amount">€</label>
               </div>
             </div>
             <div class="col-6 d-grid">
-              <button type="button" id="donate-submit-btn" class="btn btn-danger fw-bold"><span class="me-3">Faire un don</span><i class="fa-solid fa-heart text-white"></i></button>
+              <button type="button" id="donate-submit-btn" class="btn btn-danger fw-bold" data-once="submit-donation-btn">
+                <span class="me-3">Faire un don</span>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -43,25 +46,25 @@
   </div>
 </div>
 
-<div class="video-bg">
-  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-  <div class="overlay"></div>
-  <!-- The HTML5 video element that will create the background video on the header -->
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    {#    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">#}
-    <source src="{{ 'public://front/videos/bonino.mp4'|file_url }}" type="video/mp4">
-  </video>
-  <!-- The header content -->
-  <div class="container h-100 video-overlay-text">
-    <div class="d-flex h-100 align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3 fw-bold text-danger">Ndiho</h1>
-        <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.
-          <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>
-      </div>
-    </div>
-  </div>
-</div>
+{#<div class="video-bg">#}
+{#  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->#}
+{#  <div class="overlay"></div>#}
+{#  <!-- The HTML5 video element that will create the background video on the header -->#}
+{#  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">#}
+{#    #}{#    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">#}
+{#    <source src="{{ 'public://front/videos/bonino.mp4'|file_url }}" type="video/mp4">#}
+{#  </video>#}
+{#  <!-- The header content -->#}
+{#  <div class="container h-100 video-overlay-text">#}
+{#    <div class="d-flex h-100 align-items-center">#}
+{#      <div class="w-100 text-white">#}
+{#        <h1 class="display-3 fw-bold text-danger">Ndiho</h1>#}
+{#        <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.#}
+{#          <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
 
 <section class="section cta my-5">
   <div class="container h-100 video-overlay-text">

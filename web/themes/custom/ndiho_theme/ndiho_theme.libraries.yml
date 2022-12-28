@@ -28,3 +28,4 @@ global-styling:
     - core/drupal
     - core/popperjs
     - core/jquery
+    - core/once
