@@ -74,9 +74,9 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   {{ drupal_field('field_publication_featured_photo', 'node', node.nid.value, 'full') }}
-  <header>
-    <h1{{ title_attributes.addClass('node__title my-5') }}>{{ label }}</h1>
-    <div class="d-flex mb-5">
+  <header class="mb-5">
+    <h1{{ title_attributes.addClass('node__title mt-5') }}>{{ label }}</h1>
+    <div class="d-flex">
       <div class="me-3">
         {{ author_picture }}
       </div>
@@ -88,8 +88,10 @@
     </div>
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix', 'mb-5') }}>
-    {{ content.field_publication_body }}
-    {{ drupal_block('views_block:publication_photos-block_publication_photos', {label: 'bla'}) }}
+    <div class="mb-5">{{ content.field_publication_body }}</div>
+    {% if content.field_publication_photos %}
+      {{ drupal_block('views_block:publication_photos-block_publication_photos') }}
+    {% endif %}
     {% if youtube_url %}
       <div class="video-container">
         <iframe src="{{ youtube_url }}" class="border-0" type="text/html"></iframe>
