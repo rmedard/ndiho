@@ -1,39 +1,39 @@
 <div class="bg-primary mb-5 py-4" id="donation-bar">
-  <div class="container">
-    <div class="row text-white px-md-0 px-3">
-      <div class="col-md-6 ps-0">
-        <h2><i class="fa-solid fa-caret-right text-secondary me-2"></i>{{ 'Faites un don'|t }}</h2>
-        <p class="m-0 fs-5">L’autonomie financière de Jambo repose sur votre générosité.
+  <div class="container contextual-region">
+    <div class="row text-white px-md-0 px-3 row-cols-1 row-cols-md-2">
+      <div class="col">
+        <h2>{{ 'Faites un don'|t }}</h2>
+        <p class="m-0 fs-5">L’autonomie financière de Ndiho repose sur votre générosité.
           Elle nous protège contre la dépendance financière qui peut aboutir à une dépendance intellectuelle.</p>
       </div>
-      <div class="col-md-6 px-0 pt-3 pt-md-0 ps-md-3">
+      <div class="col">
         <div class="d-flex flex-column gap-2" id="donation-form" data-once="donation-form">
-          <div class="row g-2">
-            <div class="col-3 d-grid">
+          <div class="row g-2 row-cols-4">
+            <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option1" autocomplete="off" value="25">
-              <label class="btn btn-outline-dark fw-bold" for="option1">25€</label>
+              <label class="btn btn-outline-dark d-block fw-bold" for="option1">25€</label>
             </div>
-            <div class="col-3">
+            <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option2" autocomplete="off" value="50">
               <label class="btn btn-dark d-block fw-bold" for="option2">50€</label>
             </div>
-            <div class="col-3">
+            <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option3" autocomplete="off" value="100">
               <label class="btn btn-outline-dark d-block fw-bold" for="option3">100€</label>
             </div>
-            <div class="col-3">
+            <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option4" autocomplete="off" value="other">
               <label class="btn btn-outline-dark d-block fw-bold" for="option4">Autre</label>
             </div>
           </div>
-          <div class="row g-2">
-            <div class="col-6">
+          <div class="row g-2 row-cols-1 row-cols-md-2">
+            <div class="col">
               <div class="input-group free-donation-field border-0" hidden data-once="free-donation-field">
-                <input class="form-control border-0 shadow-none" type="number" min="0" id="donation-amount" value="50" data-once="donation-amount">
+                <input class="form-control border-0 shadow-none mb-2 mb-md-0" type="number" min="0" id="donation-amount" value="50" data-once="donation-amount">
                 <label class="input-group-text fw-bold bg-white border-0" for="donation-amount">€</label>
               </div>
             </div>
-            <div class="col-6 d-grid">
+            <div class="col d-grid">
               <button type="button" id="donate-submit-btn" class="btn btn-danger fw-bold" data-once="submit-donation-btn">
                 <span class="me-3">Faire un don</span>
                 <i class="fa-solid fa-heart text-white"></i>
@@ -73,6 +73,25 @@
         <h1 class="display-3 fw-bold text-danger">Ndiho</h1>
         <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.
           <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container mb-5">
+    <div class="row row-cols-1">
+      <div class="col col-md-8">
+        {{ drupal_block('views_block:publications-block_top_publications') }}
+      </div>
+      <div class="col col-md-4">
+        <h2>{{ 'Contactez-nous'|t }}</h2>
+        <div class="card mt-4">
+          <div class="card-body">
+{#            {{ drupal_entity_form('contact_message', values={contact_form: 'feedback'}) }}#}
+          Contact form here
+          </div>
+        </div>
       </div>
     </div>
   </div>

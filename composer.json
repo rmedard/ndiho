@@ -63,6 +63,7 @@
         "drupal/devel": "^5.1",
         "drupal/fontawesome": "^2.24",
         "drupal/pathauto": "^1.11",
+        "drupal/swiftmailer": "^2.3",
         "drupal/symfony_mailer": "^1.1@beta",
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^3.18",

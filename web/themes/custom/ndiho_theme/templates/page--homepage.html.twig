@@ -90,49 +90,49 @@
       {% block content %}
         <div id="main" class="container-fluid p-0">
           <div class="container mb-5">
-            <div class="row mt-n5">
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+            <div class="row mt-n5 row-cols-1 row-cols-sm-2 row-cols-md-3">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="0">
                   <span class="number">01</span>
                   <h3 class="mt-3">Mission 1</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="200">
                   <span class="number">02</span>
                   <h3 class="mt-3">Mission 2</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="300">
                   <span class="number">03</span>
                   <h3 class="mt-3">Mission 3</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="400">
                   <span class="number">04</span>
                   <h3 class="mt-3">Mission 4</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="500">
                   <span class="number">05</span>
                   <h3 class="mt-3">Mission 5</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                   <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1">
+              <div class="col mb-3 mb-md-5">
+                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="600">
                   <span class="number">06</span>
                   <h3 class="mt-3">Mission 6</h3>
                   <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
@@ -159,24 +159,6 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
-            </div>
-          {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
-        </div>
-      {% endblock %}
-    </footer>
+    {% include '@ndiho_theme/includes/footer.html.twig' %}
   </div>
 </div>

@@ -5,7 +5,7 @@ $primary: rgb(76, 149, 119);
 $primary-shade: $primary;
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
-$accent-shade: #1c1c1c;
+$accent-shade: #222222;
 $accent-light: lighten($accent-shade, 37%);
 $accent-dark: darken($accent-shade, 12%);
 
@@ -68,6 +68,7 @@ $navbar-dark-hover-color: $primary-shade;
 $navbar-dark-active-color: $primary-shade;
 $nav-link-font-size: 18px;
 $navbar-nav-link-padding-x: 20px;
+$dropdown-state-background-color: $accent-shade;
 
 //$navbar-light-toggler-border-color: $accent-shade;
 //$navbar-dark-toggler-border-color: $accent-shade;

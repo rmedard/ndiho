@@ -1,5 +1,13 @@
 <?php
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\File\FileUrlGeneratorInterface;
+use Drupal\file\FileInterface;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media\Entity\Media;
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_theme().
  */
@@ -17,4 +25,43 @@ function ndiho_interface_theme($existing, $type, $theme, $path): array {
       ],
     ],
   ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function ndiho_interface_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode): void {
+  if ($view_mode == 'featured' and $entity instanceof NodeInterface) {
+    if ($entity->bundle() == 'publication') {
+      if (!$entity->field_publication_featured_photo->isEmpty()) {
+        $photo_media = $entity->field_publication_featured_photo[0]->entity;
+        if ($photo_media instanceof Media) {
+          $styled_image_url = ImageStyle::load('publication_thumbnail')->buildUrl($photo_media->field_media_image[0]->entity->getFileUri());
+          $fileUrlGenerator = Drupal::service('file_url_generator');
+          if ($fileUrlGenerator instanceof FileUrlGeneratorInterface) {
+            $backgroundImage = $fileUrlGenerator->transformRelative($styled_image_url);
+            $build['#attached']['drupalSettings']['featuredPublications'][$entity->id()] = [
+              'id' => $entity->id(),
+              'bgImage' => $backgroundImage
+            ];
+          }
+        }
+      }
+
+
+//      $featured_image_field = $entity->get('field_publication_featured_photo');
+//      $featured_image_file = $featured_image_field->entity;
+//      if (!($featured_image_file instanceof FileInterface)) {
+//        $default_image = $featured_image_field->getSetting('default_image');
+//        if ($default_image && $default_image['uuid']) {
+//          $featured_image_file = Drupal::service('entity.repository')->loadEntityByUuid('file', $default_image['uuid']);
+//        }
+//      }
+//      $styled_image_url = ImageStyle::load('publication_thumbnail')->buildUrl($featured_image_file->getFileUri());
+//      $public_dir = Drupal::service('file_url_generator')->generate('public://')->toUriString();
+//      $public_dir_clean = substr($public_dir, strpos($public_dir, ':') + 1);
+//      $image_url = substr($styled_image_url, strpos($styled_image_url, $public_dir_clean));
+//      $build['#attached']['drupalSettings']['node']['bg-image'] = $image_url;
+    }
+  }
 }

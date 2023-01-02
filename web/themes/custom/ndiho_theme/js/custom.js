@@ -11,54 +11,24 @@
     attach: function (context, settings) {
       initAos();
       initDropDownMenus();
-
       const form = once.find('donation-form', context)[0];
-      if (form !== undefined) {
-        console.log(form.localName);
-        const donationButton = once.find('submit-donation-btn', form).at(0);
-        const donationInput = once.find('donation-amount', form).at(0);
-        let donation = donationInput.value;
-        const freeDonationField = once.find('free-donation-field', form).at(0);
-        const radios = once('fetch_radios', 'input[type=radio]', form);
-        radios.forEach(function (radio) {
-          radio.addEventListener('change', function (event) {
-            const checkedInput = event.currentTarget;
-            if (checkedInput instanceof Element) {
-              const checkedLabel = form.querySelector(`label[for="${checkedInput.id}"]`);
-              if (checkedInput.checked) {
-                donation = parseInt(checkedInput.value);
-                checkedLabel.classList.add('btn-dark');
-                checkedLabel.classList.remove('btn-outline-dark');
-                if (checkedInput.value === 'other') {
-                  donationInput.value = 0;
-                  freeDonationField.removeAttribute('hidden');
-                  freeDonationField.querySelector('input').focus();
-                }
-                else {
-                  freeDonationField.setAttribute('hidden', 'true');
-                }
-              }
-
-              radios
-                .filter(radio => radio.id !== checkedInput.id)
-                .forEach(uncheckedRadio => {
-                  if (uncheckedRadio.id !== checkedInput.id) {
-                    const uncheckedLabel = form.querySelector(`label[for="${uncheckedRadio.id}"]`);
-                    uncheckedLabel.classList.remove('btn-dark');
-                    uncheckedLabel.classList.add('btn-outline-dark');
-                  }
-                });
-            }
+      initDonationForm(form);
+      const publications = settings.featuredPublications;
+      if (publications !== undefined) {
+        const featuredBlock = context.querySelector('div.view-display-id-block_top_publications');
+        if (featuredBlock !== undefined && featuredBlock instanceof Element) {
+          const data = Object.values(publications);
+          once('fetch-featured-publications', 'article.node--type-publication', featuredBlock).forEach((article) => {
+            const id = article.getAttribute('data-history-node-id');
+            const attributes = data.filter(d => d.id == id).at(0);
+            const imageSection = article.querySelector('div.featured-image');
+            imageSection.style.backgroundImage = 'url(' + attributes.bgImage + ')';
+            imageSection.style.backgroundSize = 'cover';
+            imageSection.style.backgroundRepeat = 'no-repeat';
+            imageSection.style.backgroundPosition = 'center';
+            imageSection.style.height = '14rem';
           });
-        });
-        donationInput.addEventListener('keyup', function () {
-          donation = parseInt(this.value);
-        });
-        donationButton.addEventListener('click', function (e) {
-          if (donation > 0) {
-            window.open('https://www.paypal.com/paypalme/rebero/' + donation);
-          }
-        });
+        }
       }
     }
   };
@@ -137,4 +107,52 @@
     });
   }
 
+  function initDonationForm(form) {
+    if (form !== undefined) {
+      const donationButton = once.find('submit-donation-btn', form).at(0);
+      const donationInput = once.find('donation-amount', form).at(0);
+      let donation = donationInput.value;
+      const freeDonationField = once.find('free-donation-field', form).at(0);
+      const radios = once('fetch_radios', 'input[type=radio]', form);
+      radios.forEach(function (radio) {
+        radio.addEventListener('change', function (event) {
+          const checkedInput = event.currentTarget;
+          if (checkedInput instanceof Element) {
+            const checkedLabel = form.querySelector(`label[for="${checkedInput.id}"]`);
+            if (checkedInput.checked) {
+              donation = parseInt(checkedInput.value);
+              checkedLabel.classList.add('btn-dark');
+              checkedLabel.classList.remove('btn-outline-dark');
+              if (checkedInput.value === 'other') {
+                donationInput.value = 0;
+                freeDonationField.removeAttribute('hidden');
+                freeDonationField.querySelector('input').focus();
+              }
+              else {
+                freeDonationField.setAttribute('hidden', 'true');
+              }
+            }
+
+            radios
+              .filter(radio => radio.id !== checkedInput.id)
+              .forEach(uncheckedRadio => {
+                if (uncheckedRadio.id !== checkedInput.id) {
+                  const uncheckedLabel = form.querySelector(`label[for="${uncheckedRadio.id}"]`);
+                  uncheckedLabel.classList.remove('btn-dark');
+                  uncheckedLabel.classList.add('btn-outline-dark');
+                }
+              });
+          }
+        });
+      });
+      donationInput.addEventListener('keyup', function () {
+        donation = parseInt(this.value);
+      });
+      donationButton.addEventListener('click', function (e) {
+        if (donation > 0) {
+          window.open('https://www.paypal.com/paypalme/rebero/' + donation);
+        }
+      });
+    }
+  }
 }(Drupal, once));

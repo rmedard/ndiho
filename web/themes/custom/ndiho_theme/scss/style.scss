@@ -18,6 +18,10 @@ body {
   background: #f8f9fa;
 }
 
+div#page {
+  min-height: 100vh;
+}
+
 /* COLORS
 --------------------------------------------------*/
 
@@ -28,6 +32,18 @@ a {
 
   &:focus-visible {
     outline: none;
+  }
+}
+
+h2, .h2 {
+  position: relative;
+  &:after {
+    content: '';
+    width: 3em;
+    height: 1.3em;
+    position: absolute;
+    left: 0;
+    border-bottom: solid 3px $brand-danger;
   }
 }
 
