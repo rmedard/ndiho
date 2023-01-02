@@ -1,3 +1,56 @@
+<div class="container mb-5">
+  <div class="row mt-n5 row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+        <span class="number">01</span>
+        <h3 class="mt-3">Mission 1</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <span class="number">02</span>
+        <h3 class="mt-3">Mission 2</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+        <span class="number">03</span>
+        <h3 class="mt-3">Mission 3</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+        <span class="number">04</span>
+        <h3 class="mt-3">Mission 4</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="500">
+        <span class="number">05</span>
+        <h3 class="mt-3">Mission 5</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="600">
+        <span class="number">06</span>
+        <h3 class="mt-3">Mission 6</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="bg-primary mb-5 py-4" id="donation-bar">
   <div class="container contextual-region">
     <div class="row text-white px-md-0 px-3 row-cols-1 row-cols-md-2">
@@ -11,19 +64,19 @@
           <div class="row g-2 row-cols-4">
             <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option1" autocomplete="off" value="25">
-              <label class="btn btn-outline-dark d-block fw-bold" for="option1">25€</label>
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option1">25€</label>
             </div>
             <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option2" autocomplete="off" value="50">
-              <label class="btn btn-dark d-block fw-bold" for="option2">50€</label>
+              <label class="btn btn-dark d-block fw-bold px-1" for="option2">50€</label>
             </div>
             <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option3" autocomplete="off" value="100">
-              <label class="btn btn-outline-dark d-block fw-bold" for="option3">100€</label>
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option3">100€</label>
             </div>
             <div class="col">
               <input type="radio" class="btn-check" name="donation-options" id="option4" autocomplete="off" value="other">
-              <label class="btn btn-outline-dark d-block fw-bold" for="option4">Autre</label>
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option4">Autre</label>
             </div>
           </div>
           <div class="row g-2 row-cols-1 row-cols-md-2">
@@ -78,8 +131,8 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container mb-5">
+<section class="section publications-section pb-5">
+  <div class="container">
     <div class="row row-cols-1">
       <div class="col col-md-8">
         {{ drupal_block('views_block:publications-block_top_publications') }}
@@ -88,8 +141,7 @@
         <h2>{{ 'Contactez-nous'|t }}</h2>
         <div class="card mt-4">
           <div class="card-body">
-{#            {{ drupal_entity_form('contact_message', values={contact_form: 'feedback'}) }}#}
-          Contact form here
+            {{ drupal_entity_form('contact_message', values={contact_form: 'feedback'}) }}
           </div>
         </div>
       </div>

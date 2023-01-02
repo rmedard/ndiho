@@ -9,11 +9,6 @@ Description: Bootstrap 4 with Sass
 /* GENERAL STYLES
 -------------------------------------------------*/
 
-*, *::before, *::after {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
 body {
   background: #f8f9fa;
 }
@@ -54,6 +49,12 @@ a.nav-link {
 
   &:hover {
     color: $navbar-dark-hover-color !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  ul.navbar-nav {
+    align-items: center;
   }
 }
 
@@ -114,6 +115,13 @@ header#header {
   &:hover {
     background: none;
   }
+}
+
+.publications-section {
+  background-image: url("../images/backgrounds/publications.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
 .cta {
@@ -193,6 +201,81 @@ nav#navbar-main {
     }
   }
 }
+
+// Navbar toggler
+.navbar-toggler {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: $primary-shade;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0;
+}
+
+/* When clicked */
+
+.navbar-toggler .top-bar {
+  margin-top: 0;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0;
+  transform: rotate(-135deg);
+}
+
+/* When collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+// End Navbar toggler
 
 .number {
   opacity: 0.1;

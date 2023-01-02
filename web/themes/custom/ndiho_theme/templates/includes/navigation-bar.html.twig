@@ -1,51 +1,23 @@
 {% block head %}
-  {% if page.secondary_menu or page.top_header or page.top_header_form %}
-    <nav{{ navbar_top_attributes }}>
-      {% if container_navbar %}
-      <div class="container">
-        {% endif %}
-        {{ page.secondary_menu }}
-        {{ page.top_header }}
-        {% if page.top_header_form %}
-          <div class="form-inline navbar-form ms-auto">
-            {{ page.top_header_form }}
-          </div>
-        {% endif %}
-        {% if container_navbar %}
-      </div>
-      {% endif %}
-    </nav>
-  {% endif %}
-  <nav{{ navbar_attributes.addClass('shadow-none') }}>
-    {% if container_navbar %}
+  <nav{{ navbar_attributes.addClass('shadow-0') }}>
     <div class="container">
-      {% endif %}
       {{ page.header }}
-      {% if page.primary_menu or page.header_form %}
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
-          {% if navbar_offcanvas %}
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            {% endif %}
-            {{ page.primary_menu }}
-            {% if page.header_form %}
-              <div class="form-inline navbar-form justify-content-end">
-                {{ page.header_form }}
-              </div>
-            {% endif %}
-            {% if navbar_offcanvas %}
-          </div>
-          {% endif %}
-        </div>
-      {% endif %}
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+              type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarJambo" aria-controls="navbarJambo" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="{{ navbar_collapse_class }}" id="navbarJambo">
+        {{ page.primary_menu }}
+      </div>
       {% if sidebar_collapse %}
-        <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
       {% endif %}
-      {% if container_navbar %}
     </div>
-    {% endif %}
   </nav>
 {% endblock %}

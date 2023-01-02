@@ -71,76 +71,41 @@
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
       {% include '@ndiho_theme/includes/navigation-bar.html.twig' %}
-      <div class="main-jumbo py-5 text-white d-flex flex-column justify-content-center">
+      <div class="main-jumbo container-fluid py-5 text-white d-flex flex-column justify-content-center">
         <div class="container" data-aos="fade-up">
-          <div class="row mb-5">
-            <div class="col-12 col-md-8">
+          <div class="row row-cols-1 mb-5">
+            <div class="col col-md-8">
               <h1 class="text-uppercase text-white">Ndiho <br>
                 <span class="text-danger">J'existe</span><br>
                 J'ai survécu</h1>
             </div>
-            <div class="col-12 col-md-4 d-flex align-items-center justify-content-center border-start border-3">
+            <div class="col col-md-4 d-flex align-items-center justify-content-center border-start border-3">
               <a href="#" class="btn btn-danger btn-lg"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
             </div>
           </div>
         </div>
       </div>
     </header>
+    {% if page.highlighted %}
+      <div class="highlighted">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.highlighted }}
+        </aside>
+      </div>
+    {% endif %}
+    {% if page.featured_top %}
+      {% block featured %}
+        <div class="featured-top">
+          <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
+            {{ page.featured_top }}
+          </aside>
+        </div>
+      {% endblock %}
+    {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" class="container-fluid p-0">
-          <div class="container mb-5">
-            <div class="row mt-n5 row-cols-1 row-cols-sm-2 row-cols-md-3">
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="0">
-                  <span class="number">01</span>
-                  <h3 class="mt-3">Mission 1</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="200">
-                  <span class="number">02</span>
-                  <h3 class="mt-3">Mission 2</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="300">
-                  <span class="number">03</span>
-                  <h3 class="mt-3">Mission 3</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="400">
-                  <span class="number">04</span>
-                  <h3 class="mt-3">Mission 4</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="500">
-                  <span class="number">05</span>
-                  <h3 class="mt-3">Mission 5</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-              <div class="col mb-3 mb-md-5">
-                <div class="card p-5 border-0 rounded-top border-bottom position-relative hover-style-1" data-aos="fade-up" data-aos-delay="600">
-                  <span class="number">06</span>
-                  <h3 class="mt-3">Mission 6</h3>
-                  <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
-                  <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <main{{ content_attributes }}>
             <section class="section">
               <a id="main-content" tabindex="-1"></a>
