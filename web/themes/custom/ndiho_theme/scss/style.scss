@@ -52,12 +52,6 @@ a.nav-link {
   }
 }
 
-@include media-breakpoint-down(sm) {
-  ul.navbar-nav {
-    align-items: center;
-  }
-}
-
 .bg-inverse {
   background: $primary-shade !important;
 }
@@ -365,5 +359,18 @@ div.video-bg {
     bottom: 0;
     right: 0;
     left: 0;
+  }
+}
+
+div.featured-image {
+  height: 14rem;
+}
+
+@include media-breakpoint-down(sm) {
+  ul.navbar-nav {
+    align-items: center;
+  }
+  div.featured-image {
+    height: 10rem;
   }
 }

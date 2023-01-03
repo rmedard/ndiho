@@ -79,7 +79,9 @@
       </h5>
       <div{{ content_attributes.addClass('node__content', 'clearfix', 'd-flex', 'flex-column', 'flex-grow-1', 'flex-shrink-1') }}>
         <div class="flex-grow-1 flex-shrink-1">
-          {{ content.field_publication_body }}
+          <div class="d-none d-sm-block">
+            {{ content.field_publication_body }}
+          </div>
         </div>
         <div class="node__meta d-flex gap-2 align-items-center">
           {{ author_picture }}

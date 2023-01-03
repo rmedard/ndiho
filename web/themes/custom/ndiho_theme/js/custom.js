@@ -26,7 +26,6 @@
             imageSection.style.backgroundSize = 'cover';
             imageSection.style.backgroundRepeat = 'no-repeat';
             imageSection.style.backgroundPosition = 'center';
-            imageSection.style.height = '14rem';
           });
         }
       }
