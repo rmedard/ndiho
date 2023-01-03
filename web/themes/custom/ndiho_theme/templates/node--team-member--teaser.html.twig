@@ -72,24 +72,13 @@
     'clearfix', 'border-0'
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
-  <div class="card border-0 shadow">
+<article{{ attributes.addClass(classes) }} data-aos="zoom-in">
+  <div class="card border-0 shadow-sm">
     {{ content.field_team_member_photo }}
     <div class="card-body text-center">
-      <a href="{{ '#canvas-' ~ node.nid.value }}" role="button" data-mdb-toggle="offcanvas"
-         aria-controls="{{ 'canvas-' ~ node.nid.value }}" class="card-title h5 stretched-link">{{ label }}</a>
+      {{ label }}
       <div class="card-text text-black-50">{{ content.field_team_member_role }}</div>
-      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="{{ 'canvas-' ~ node.nid.value }}" data-mdb-scroll="true">
-        <div class="container">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title">{{ label }}</h5>
-            <button type="button" class="btn-close text-reset" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            {{ content.field_team_member_bio }}
-          </div>
-        </div>
-      </div>
+      <div class="bio">{{ content.field_team_member_bio }}</div>
     </div>
   </div>
 </article>
