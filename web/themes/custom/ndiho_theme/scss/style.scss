@@ -373,4 +373,8 @@ div.featured-image {
   div.featured-image {
     height: 10rem;
   }
+
+  a.navbar-brand > img {
+    max-height: 50px
+  }
 }
