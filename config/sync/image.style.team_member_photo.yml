@@ -1,0 +1,15 @@
+uuid: 73c660d2-bb5b-4c63-aeaa-9efd4cb2e529
+langcode: en
+status: true
+dependencies: {  }
+name: team_member_photo
+label: 'Team member photo (500x350)'
+effects:
+  b613fa49-7a57-47ed-b78b-1c1d307225d8:
+    uuid: b613fa49-7a57-47ed-b78b-1c1d307225d8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 350
+      anchor: center-top

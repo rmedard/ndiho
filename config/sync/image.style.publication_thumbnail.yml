@@ -1,0 +1,15 @@
+uuid: e928ab42-a8cd-49a4-9853-ad19f834e754
+langcode: en
+status: true
+dependencies: {  }
+name: publication_thumbnail
+label: 'Publication Thumbnail (230x190)'
+effects:
+  1a8a1795-a205-4418-8269-a676456b2ff1:
+    uuid: 1a8a1795-a205-4418-8269-a676456b2ff1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 190
+      anchor: center-center

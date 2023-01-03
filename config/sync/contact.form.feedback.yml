@@ -1,0 +1,14 @@
+uuid: dd8296bb-5c59-4707-acb3-497e8e03dd42
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - medard.rebero@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,48 @@
+uuid: ead6b7bc-ad0c-4281-81db-d80f44862e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.field_publication_body
+    - field.field.node.publication.field_publication_featured_photo
+    - field.field.node.publication.field_publication_photos
+    - field.field.node.publication.field_publication_youtube_video
+    - image.style.publication_thumbnail
+    - node.type.publication
+  module:
+    - media
+    - text
+    - user
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  field_publication_body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_publication_featured_photo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: publication_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_publication_photos: true
+  field_publication_youtube_video: true

@@ -1,0 +1,62 @@
+uuid: 84f92ed3-d594-4546-bcb1-90f85068f237
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.team_member.field_team_member_bio
+    - field.field.node.team_member.field_team_member_email
+    - field.field.node.team_member.field_team_member_photo
+    - field.field.node.team_member.field_team_member_role
+    - field.field.node.team_member.field_team_member_twitter
+    - image.style.team_member_photo
+    - node.type.team_member
+  module:
+    - media
+    - options
+    - text
+    - user
+id: node.team_member.teaser
+targetEntityType: node
+bundle: team_member
+mode: teaser
+content:
+  field_team_member_bio:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_team_member_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_team_member_photo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: team_member_photo
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_team_member_role:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_team_member_twitter: true

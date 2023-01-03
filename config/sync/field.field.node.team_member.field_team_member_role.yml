@@ -1,0 +1,23 @@
+uuid: 12878e19-3d63-49d5-8b0a-4ca01cf4fe76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_member_role
+    - node.type.team_member
+  module:
+    - options
+id: node.team_member.field_team_member_role
+field_name: field_team_member_role
+entity_type: node
+bundle: team_member
+label: Role
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: member
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: 5fae1aa0-ddf4-4dda-9951-8c983035c46a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ndiho_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: ndiho_theme_help
+theme: ndiho_theme
+region: top_header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

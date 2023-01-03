@@ -1,0 +1,22 @@
+uuid: 14bd9f4f-ec34-4b5d-954d-d7148690cbcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ndiho_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: ndiho_theme_content
+theme: ndiho_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

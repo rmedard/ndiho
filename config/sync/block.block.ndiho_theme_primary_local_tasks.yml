@@ -1,0 +1,22 @@
+uuid: ea653c58-70d2-445e-a345-0d4c5dd6921d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ndiho_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: ndiho_theme_primary_local_tasks
+theme: ndiho_theme
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
