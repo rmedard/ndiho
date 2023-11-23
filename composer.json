@@ -63,6 +63,7 @@
         "drupal/core-recommended": "^10",
         "drupal/devel": "^5.1",
         "drupal/fontawesome": "^2.24",
+        "drupal/mailsystem": "^4.4",
         "drupal/module_filter": "^4.0",
         "drupal/pathauto": "^1.11",
         "drupal/single_content_sync": "^1.3",
