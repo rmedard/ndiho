@@ -1,0 +1,150 @@
+<div class="container mb-5">
+  <div class="row mt-n5 row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+        <span class="number">01</span>
+        <h3 class="mt-3">Mission 1</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <span class="number">02</span>
+        <h3 class="mt-3">Mission 2</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+        <span class="number">03</span>
+        <h3 class="mt-3">Mission 3</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+        <span class="number">04</span>
+        <h3 class="mt-3">Mission 4</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="500">
+        <span class="number">05</span>
+        <h3 class="mt-3">Mission 5</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+    <div class="col mb-3 mb-md-5">
+      <div class="card p-5 border-0 rounded-top hover-style-1 shadow-sm" data-aos="fade-up" data-aos-delay="600">
+        <span class="number">06</span>
+        <h3 class="mt-3">Mission 6</h3>
+        <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
+        <a href="#" class="text-danger text-uppercase font-size-13 font-weight-bold"><i class="fa-solid fa-minus me-2"></i>lire la suite</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-primary mb-5 py-4" id="donation-bar">
+  <div class="container contextual-region">
+    <div class="row text-white px-md-0 px-3 row-cols-1 row-cols-md-2">
+      <div class="col">
+        <h2>{{ 'Faites un don'|t }}</h2>
+        <p class="m-0 fs-5">L’autonomie financière de Ndiho repose sur votre générosité.
+          Elle nous protège contre la dépendance financière qui peut aboutir à une dépendance intellectuelle.</p>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-column gap-2" id="donation-form" data-once="donation-form">
+          <div class="row g-2 row-cols-4">
+            <div class="col">
+              <input type="radio" class="btn-check" name="donation-options" id="option1" autocomplete="off" value="25">
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option1">25€</label>
+            </div>
+            <div class="col">
+              <input type="radio" class="btn-check" name="donation-options" id="option2" autocomplete="off" value="50">
+              <label class="btn btn-dark d-block fw-bold px-1" for="option2">50€</label>
+            </div>
+            <div class="col">
+              <input type="radio" class="btn-check" name="donation-options" id="option3" autocomplete="off" value="100">
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option3">100€</label>
+            </div>
+            <div class="col">
+              <input type="radio" class="btn-check" name="donation-options" id="option4" autocomplete="off" value="other">
+              <label class="btn btn-outline-dark d-block fw-bold px-1" for="option4">Autre</label>
+            </div>
+          </div>
+          <div class="row g-2 row-cols-1 row-cols-md-2">
+            <div class="col">
+              <div class="input-group free-donation-field border-0 input-group-lg" hidden data-once="free-donation-field">
+                <input class="form-control border-0 shadow-none mb-2 mb-md-0" type="number" min="0" id="donation-amount" value="50" data-once="donation-amount">
+                <label class="input-group-text fw-bold bg-white border-0" for="donation-amount">€</label>
+              </div>
+            </div>
+            <div class="col d-grid">
+              <button type="button" id="donate-submit-btn" class="btn btn-danger fw-bold" data-once="submit-donation-btn">
+                <span class="me-3">Faire un don</span>
+                <i class="fa-solid fa-heart text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{#<div class="video-bg">#}
+{#  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->#}
+{#  <div class="overlay"></div>#}
+{#  <!-- The HTML5 video element that will create the background video on the header -->#}
+{#  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">#}
+{#    #}{#    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">#}
+{#    <source src="{{ 'public://front/videos/bonino.mp4'|file_url }}" type="video/mp4">#}
+{#  </video>#}
+{#  <!-- The header content -->#}
+{#  <div class="container h-100 video-overlay-text">#}
+{#    <div class="d-flex h-100 align-items-center">#}
+{#      <div class="w-100 text-white">#}
+{#        <h1 class="display-3 fw-bold text-danger">Ndiho</h1>#}
+{#        <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.#}
+{#          <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+
+<section class="section cta my-5">
+  <div class="container h-100 video-overlay-text">
+    <div class="d-flex h-100 align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3 fw-bold text-danger">Ndiho</h1>
+        <p class="lead mb-0 display-6">Il n'y a jamais eu de bonne guerre, ni de mauvaise paix.
+          <br><span class="text-muted small fs-3">-Benjamin FRANKLIN</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section publications-section pb-5">
+  <div class="container">
+    <div class="row row-cols-1">
+      <div class="col col-md-8">
+        {{ drupal_block('views_block:publications-block_top_publications') }}
+      </div>
+      <div class="col col-md-4">
+        <h2>{{ 'Contactez-nous'|t }}</h2>
+        <div class="card mt-4">
+          <div class="card-body">
+            {{ drupal_entity_form('contact_message', values={contact_form: 'feedback'}) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

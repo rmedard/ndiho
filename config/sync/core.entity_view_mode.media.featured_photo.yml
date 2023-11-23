@@ -1,0 +1,10 @@
+uuid: 7a0be4ad-9d34-4a8a-9bae-afa80ac5bb72
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.featured_photo
+label: 'Featured Photo'
+targetEntityType: media
+cache: true

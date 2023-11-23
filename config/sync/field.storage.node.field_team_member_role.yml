@@ -1,0 +1,30 @@
+uuid: 7a1b98a7-079d-40c8-a25a-8fe438f45f0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_team_member_role
+field_name: field_team_member_role
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: president
+      label: Président
+    -
+      value: tresorier
+      label: Trésorier
+    -
+      value: member
+      label: Membre
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

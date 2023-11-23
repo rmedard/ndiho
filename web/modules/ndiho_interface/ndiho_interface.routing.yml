@@ -1,0 +1,38 @@
+ndiho_interface.example:
+  path: '/homepage'
+  defaults:
+    _title: 'Ndiho'
+    _controller: '\Drupal\ndiho_interface\Controller\NdihoInterfaceController::homepage'
+  requirements:
+    _permission: 'access content'
+
+ndiho_interface.ndiho_settings:
+  path: '/ndiho-settings'
+  defaults:
+    _title: 'Ndiho Settings'
+    _controller: '\Drupal\ndiho_interface\Controller\NdihoInterfaceController::settingsPage'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+ndiho_interface.social_media.settings:
+  path: '/admin/ndiho-settings/social-media'
+  defaults:
+    _form: '\Drupal\ndiho_interface\Form\SocialMediaSettings'
+    _title: 'Social Media Settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+ndiho_interface.donation.settings:
+  path: '/admin/ndiho-settings/donation'
+  defaults:
+    _form: '\Drupal\ndiho_interface\Form\DonationSettings'
+    _title: 'Ndiho Donation Settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+

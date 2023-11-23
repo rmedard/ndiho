@@ -1,0 +1,28 @@
+uuid: 48bad031-2149-4687-98a1-aae51eb1e754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projet.field_project_description
+    - node.type.projet
+  module:
+    - text
+    - user
+id: node.projet.default
+targetEntityType: node
+bundle: projet
+mode: default
+content:
+  field_project_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

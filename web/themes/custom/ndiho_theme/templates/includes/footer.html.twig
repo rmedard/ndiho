@@ -1,0 +1,25 @@
+<footer class="site-footer small">
+  <div class="container-fluid p-0">
+    <div class="site-footer__top clearfix py-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3">
+          <div class="col border-end mb-5 m-md-0">{{ page.footer_first }}</div>
+          <div class="col border-end mb-5 m-md-0">
+            <h2 class="mb-3 mb-md-5 text-white">Nous vous remercions pour votre soutien.</h2>
+            <a href="#" class="btn btn-danger btn-lg d-block"><span class="fw-bold me-3">Nous soutenir</span><i class="fa-solid fa-heart"></i></a>
+          </div>
+          <div class="col d-flex align-items-center justify-content-center flex-column">
+            <img src="{{ drupal_url(active_theme_path() ~ '/images/ndiho-logo.png', {absolute: true}) }}"
+                 alt="Ndiho Logo" class="img-fluid" style="height: 10rem"/>
+            <p class="text-white text-muted fst-italic">Ndiho, j'existe, j'ai survécu!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom text-center text-lighter bg-primary mt-3 text-white py-2">
+      <div class="container">
+        <div>Copyright <i class="fa-solid fa-copyright"></i> {{ 'now' | date('Y') }} <span class="fw-bold">{{ drupal_token('site:name') }}</span> | <span class="text-dark fw-bold">Ndiho, J'existe, J'ai survécu!</span></div>
+      </div>
+    </div>
+  </div>
+</footer>

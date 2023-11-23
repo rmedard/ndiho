@@ -1,0 +1,17 @@
+/* IMPORTS */
+
+//@import url(font-awesome.min.css);
+// variables
+@import "variables";
+// typography
+@import "typography";
+//bootstrap
+//material design bootstrap
+//@import "../node_modules/mdb-ui-kit/src/scss/bootstrap/bootstrap.scss";
+@import "../node_modules/mdb-ui-kit/src/scss/bootstrap/bootstrap-grid.scss";
+@import "../node_modules/mdb-ui-kit/src/scss/mdb.free.scss";
+
+// mixins
+//@import "mixins";
+// barrio
+//@import "../../../contrib/bootstrap_barrio/scss/barrio";

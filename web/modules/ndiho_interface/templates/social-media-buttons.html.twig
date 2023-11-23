@@ -1,0 +1,21 @@
+<h2 class="mb-3 mb-md-5 text-white">Nos réseaux sociaux</h2>
+{% if facebook is not empty %}
+  <a href="{{ facebook }}" target="_blank" class="hir-social-link">
+    <i class="fa fa-facebook-official fa-3x" aria-hidden="true" style="color: #0B8AEF; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if twitter is not empty %}
+  <a href="{{ twitter }}" target="_blank" class="hir-social-link">
+    <i class="fa fa-twitter-square fa-3x" aria-hidden="true" style="color: #1A91DA; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if instagram is not empty %}
+  <a href="{{ instagram }}" target="_blank" class="hir-social-link">
+    <i class="fa fa-instagram fa-3x" aria-hidden="true" style="color: #D62977; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if youtube is not empty %}
+  <a href="{{ youtube }}" target="_blank" class="hir-social-link">
+    <i class="fa fa-youtube fa-3x" aria-hidden="true" style="color: #FF0100; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}

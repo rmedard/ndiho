@@ -1,0 +1,30 @@
+uuid: 26a9bf4b-f25c-451e-b8fa-d0cfc99cb91d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.featured_photo
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.featured_photo
+targetEntityType: media
+bundle: image
+mode: featured_photo
+content:
+  field_media_image:
+    type: image_url
+    label: visually_hidden
+    settings:
+      image_style: publication_thumbnail
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

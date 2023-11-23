@@ -1,0 +1,15 @@
+uuid: d5df5d99-dfb7-4623-8f02-89e8c5cdfd1f
+langcode: en
+status: true
+dependencies: {  }
+name: featured_photo_full
+label: 'Featured Photo Full (730x430)'
+effects:
+  2b771cb3-6d64-4c1a-afcc-d7fa869edcdd:
+    uuid: 2b771cb3-6d64-4c1a-afcc-d7fa869edcdd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 730
+      height: 430
+      anchor: center-center

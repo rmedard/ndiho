@@ -1,0 +1,23 @@
+{% block head %}
+  <nav{{ navbar_attributes.addClass('shadow-0') }}>
+    <div class="container">
+      {{ page.header }}
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+              type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarJambo" aria-controls="navbarJambo" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="{{ navbar_collapse_class }}" id="navbarJambo">
+        {{ page.primary_menu }}
+      </div>
+      {% if sidebar_collapse %}
+        <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+      {% endif %}
+    </div>
+  </nav>
+{% endblock %}

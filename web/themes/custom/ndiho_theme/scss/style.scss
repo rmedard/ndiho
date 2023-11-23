@@ -1,0 +1,380 @@
+/*
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+  background: #f8f9fa;
+}
+
+div#page {
+  min-height: 100vh;
+}
+
+/* COLORS
+--------------------------------------------------*/
+
+a {
+  .nav-link {
+    color: $navbar-dark-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+h2, .h2 {
+  position: relative;
+  &:after {
+    content: '';
+    width: 3em;
+    height: 1.3em;
+    position: absolute;
+    left: 0;
+    border-bottom: solid 3px $brand-danger;
+  }
+}
+
+a.nav-link {
+  &:focus {
+    color: $navbar-dark-color !important;
+  }
+
+  &:hover {
+    color: $navbar-dark-hover-color !important;
+  }
+}
+
+.bg-inverse {
+  background: $primary-shade !important;
+}
+
+.site-footer {
+  background: $accent-shade !important;
+}
+
+.dropdown-item {
+  color: $navbar-dark-color;
+}
+
+.site-name-slogan a {
+  text-decoration: none;
+}
+
+.card-group img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.card-group .field--type-image {
+  margin: 0
+}
+
+.slick {
+  width: 100%;
+}
+
+.slick > div {
+  margin: 0 15px;
+}
+
+header#header {
+  background-image: url("../images/backgrounds/homepage.webp");
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .main-jumbo {
+    min-height: 75vh;
+
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+.dropdown-item {
+  width: auto;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.publications-section {
+  background-image: url("../images/backgrounds/publications.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.cta {
+  background: url(../images/backgrounds/refugees.jpg) fixed 50% 50% no-repeat;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  height: 50vh;
+}
+
+#donation-bar {
+  background-image: url("../images/backgrounds/donate.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav#navbar-main {
+  background: linear-gradient(to bottom, #222, rgba(34, 34, 34, 0));
+  transition: all 0.25s ease;
+
+  li.nav-item {
+    font-weight: 600;
+
+    a {
+      position: relative;
+
+      &.dropdown-toggle::after {
+        border: none;
+      }
+    }
+
+
+    a.nav-link.is-active:after {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.has-background {
+    background: $white;
+
+    li.nav-item > a.nav-link {
+      color: $accent-shade !important;
+
+      &:after {
+        background: $accent-shade;
+      }
+
+      &.is-active {
+        &:after {
+          background: $accent-shade;
+        }
+      }
+    }
+
+    .toggler-icon {
+      background: $accent-shade;
+    }
+  }
+}
+
+// Navbar toggler
+.navbar-toggler {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: $primary-shade;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0;
+}
+
+/* When clicked */
+
+.navbar-toggler .top-bar {
+  margin-top: 0;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0;
+  transform: rotate(-135deg);
+}
+
+/* When collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+// End Navbar toggler
+
+.number {
+  opacity: 0.1;
+  font-size: 130px;
+  display: block;
+  line-height: 120px;
+  position: absolute;
+  top: 10px;
+}
+
+.hover-style-1 {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+    background: linear-gradient(90deg, $primary-shade 0%, $primary-dark 100%);
+    border-color: $primary-shade;
+  }
+
+  h3, p, a, i, h4 {
+    position: relative;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+  }
+
+  &:hover {
+
+    &:before {
+      height: 100%;
+    }
+
+    a {
+      color: rgba(255, 255, 255, .8) !important;
+    }
+  }
+}
+
+.hover-style-1:hover h3,
+.hover-style-1:hover h4,
+.hover-style-1:hover p,
+.hover-style-1:hover a {
+  color: $primary-light;
+}
+
+.hover-style-1:hover i {
+  color: rgba(255, 255, 255, .8) !important;
+}
+
+div.video-bg {
+  position: relative;
+  max-height: 630px;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    z-index: 0;
+    margin-top: -10.5%;
+    margin-bottom: -10.5%;
+  }
+
+  div.overlay {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+div.featured-image {
+  height: 14rem;
+}
+
+@include media-breakpoint-down(sm) {
+  ul.navbar-nav {
+    align-items: center;
+  }
+  div.featured-image {
+    height: 10rem;
+  }
+
+  a.navbar-brand > img {
+    max-height: 50px
+  }
+}

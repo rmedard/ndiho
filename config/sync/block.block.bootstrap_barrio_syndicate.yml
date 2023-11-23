@@ -1,0 +1,23 @@
+uuid: ba76b0df-5abc-4e49-b191-b5ff98bcd2b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - bootstrap_barrio
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: bootstrap_barrio_syndicate
+theme: bootstrap_barrio
+region: top_header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

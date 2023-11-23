@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function ndiho_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state): void {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ndiho_theme_preprocess_html(&$variables): void {
+  $variables['#attached']['drupalSettings']['path']['themeUrl'] = Drupal::theme()
+    ->getActiveTheme()
+    ->getPath();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ndiho_theme_preprocess_page(&$variables): void {
+  $variables['theme_path'] = 'path_here';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ndiho_theme_preprocess_node(&$variables): void {
+  if ($variables['view_mode'] === 'full') {
+    $node = $variables['node'];
+    if ($node instanceof NodeInterface && $node->bundle() === 'publication') {
+      if (!$node->field_publication_youtube_video->isEmpty()) {
+        $youtubeUrl = $node->field_publication_youtube_video->entity->field_media_oembed_video[0]->value;
+        $url_components = parse_url($youtubeUrl);
+        parse_str($url_components['query'], $params);
+        if (array_key_exists('v', $params)) {
+          $video_id = $params['v'];
+          $variables['youtube_url'] = 'https://www.youtube.com/embed/' . $video_id;
+        } elseif (str_contains($youtubeUrl, 'embed')) {
+          $variables['youtube_url'] = $youtubeUrl;
+        }
+      }
+    }
+  }
+}

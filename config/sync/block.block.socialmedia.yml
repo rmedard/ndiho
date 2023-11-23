@@ -1,0 +1,20 @@
+uuid: fddf714a-f660-478f-a333-e52acb2db419
+langcode: en
+status: true
+dependencies:
+  module:
+    - ndiho_interface
+  theme:
+    - ndiho_theme
+id: socialmedia
+theme: ndiho_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: ndiho_interface_social_media
+settings:
+  id: ndiho_interface_social_media
+  label: 'Social Media'
+  label_display: '0'
+  provider: ndiho_interface
+visibility: {  }

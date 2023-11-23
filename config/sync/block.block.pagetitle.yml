@@ -1,0 +1,27 @@
+uuid: 5f39f3f2-3243-42e7-93e8-3ebd699863cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - ndiho_theme
+id: pagetitle
+theme: ndiho_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      projet: projet

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: a4f26cba-b782-40d2-a7f6-636aec138291
+name: Ndiho
+mail: medard.rebero@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /homepage
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

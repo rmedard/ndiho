@@ -1,0 +1,63 @@
+uuid: 622a6c30-a5e8-442a-b42f-d83d8555c44b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.publication.field_publication_body
+    - field.field.node.publication.field_publication_featured_photo
+    - field.field.node.publication.field_publication_photos
+    - field.field.node.publication.field_publication_youtube_video
+    - image.style.featured_photo_full
+    - node.type.publication
+  module:
+    - media
+    - text
+    - user
+id: node.publication.full
+targetEntityType: node
+bundle: publication
+mode: full
+content:
+  field_publication_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_publication_featured_photo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: featured_photo_full
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_publication_photos:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_publication_youtube_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }
